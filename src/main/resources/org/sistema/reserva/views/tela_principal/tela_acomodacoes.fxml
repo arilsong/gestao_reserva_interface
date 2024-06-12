@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="550.0" prefWidth="944.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sistema.reserva.controllersFx.Tela_Principal.AcomodacoesFx">
+   <children>
+      <HBox alignment="CENTER" prefHeight="202.0" prefWidth="944.0" styleClass="vboxbackground">
+         <children>
+            <Label fx:id="label1" prefHeight="103.0" prefWidth="302.0" text="Nossas Acomodacoes " textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB" size="31.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="35.0" prefWidth="944.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="396.0" />
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="444.0" spacing="20.0">
+               <children>
+                  <DatePicker fx:id="data_checkin" promptText="Data Checkin" />
+                  <DatePicker fx:id="data_chekout" promptText="Data Checkout" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <ScrollPane fx:id="scroll" hbarPolicy="NEVER" maxWidth="910.0" minWidth="910.0" prefHeight="450.0" prefWidth="910.0" style="-fx-border-color: transparent transparent black transparent; -fx-border-width: 0px; -fx-background-color: transparent transparent black transparent;" HBox.hgrow="ALWAYS">
+               <content>
+                  <GridPane fx:id="grid" alignment="CENTER" prefHeight="22.0" prefWidth="701.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

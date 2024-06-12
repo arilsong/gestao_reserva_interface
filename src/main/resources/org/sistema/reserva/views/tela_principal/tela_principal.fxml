@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sistema.reserva.controllersFx.Tela_Principal.TelaPrincipalFx">
+   <top>
+      <HBox prefHeight="59.0" prefWidth="904.0" styleClass="nav" stylesheets="@../../css/style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="logo">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HOTEL" textAlignment="CENTER" wrappingWidth="144.53671264648438">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="47.0" prefWidth="436.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="500.0" prefHeight="47.0" prefWidth="286.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="btnHome" maxHeight="1.7976931348623157E308" minHeight="16.0" mnemonicParsing="false" onAction="#btnClicado" prefHeight="33.0" prefWidth="89.0" styleClass="navButton" text="HOME" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                           <effect>
+                              <DropShadow>
+                                 <color>
+                                    <Color opacity="0.0" />
+                                 </color>
+                              </DropShadow>
+                           </effect>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Region prefHeight="59.0" prefWidth="58.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnAcomodacoes" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnClicado" prefHeight="32.0" prefWidth="130.0" styleClass="navButton" text="ACOMODACOES" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                        <Region prefHeight="59.0" prefWidth="48.0" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="btnSobre" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnClicado" prefHeight="31.0" prefWidth="97.0" styleClass="navButton" text="SOBRE">
+                           <HBox.margin>
+                              <Insets right="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox fx:id="hbox" alignment="CENTER_RIGHT" prefHeight="59.0" prefWidth="295.0" spacing="15.0" style="-fx-background-color: #fff;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button fx:id="btnDashBoard" mnemonicParsing="false" onAction="#btnClicado" styleClass="btnMenu" text="DashBoard" />
+                  <Button fx:id="btnLogin" mnemonicParsing="false" onAction="#btnClicado" styleClass="btnMenu" text="Login" />
+                  <Button fx:id="btnSair" mnemonicParsing="false" onAction="#btnClicado" styleClass="btnMenu" text="Sair" />
+                  <Button fx:id="btnPerfil" mnemonicParsing="false" onAction="#btnClicado" prefHeight="30.0" prefWidth="48.0" visible="false">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../img/icons/iconUser%20(3).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding></HBox>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
