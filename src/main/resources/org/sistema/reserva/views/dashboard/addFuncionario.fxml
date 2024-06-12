@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="570.0" maxWidth="680.0" minHeight="450.0" minWidth="680.0" prefHeight="570.0" prefWidth="680.0" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sistema.reserva.controllersFx.Funcionario.addFuncionarioFx">
+   <children>
+      <Text fx:id="titulo" fill="#786def" layoutX="27.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Adicionar Funcionario">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnAdicionar" layoutX="490.0" layoutY="512.0" mnemonicParsing="false" onAction="#btnClicado" prefHeight="26.0" prefWidth="150.0" text="Adicionar" />
+      <Button fx:id="btnCancelar" layoutX="302.0" layoutY="512.0" mnemonicParsing="false" onAction="#btnClicado" prefHeight="26.0" prefWidth="150.0" text="Cancelar" />
+      <VBox alignment="CENTER_LEFT" layoutX="27.0" layoutY="74.0" prefHeight="425.0" prefWidth="275.0" spacing="10.0">
+         <children>
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Nome">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nomeFld" prefHeight="26.0" prefWidth="254.0" promptText="nome" styleClass="inputField" />
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Sobrenome ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="sobrenomeFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Nome usuario">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nomeUsuarioFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Email">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox layoutX="366.0" layoutY="152.0" prefHeight="307.0" prefWidth="275.0" spacing="10.0">
+         <children>
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Senha ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="senhaFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Telefone">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="telefoneFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Endereco">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="enderecoFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+            <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Cargo">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="cargoFld" prefHeight="26.0" prefWidth="254.0" styleClass="inputField" />
+            <HBox alignment="CENTER" prefHeight="46.0" prefWidth="275.0" spacing="20.0">
+               <children>
+                  <Text fill="#786def" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: 200;" text="Cargo">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <ChoiceBox fx:id="nivelAcesssoFld" prefWidth="150.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextField fx:id="idFld" layoutX="27.0" layoutY="525.0" prefHeight="0.0" prefWidth="14.0" visible="false" />
+   </children>
+</AnchorPane>
