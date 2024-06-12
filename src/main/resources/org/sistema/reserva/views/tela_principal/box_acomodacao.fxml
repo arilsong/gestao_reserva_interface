@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor_pane" prefHeight="165.0" prefWidth="910.0" style="-fx-border-color: transparent transparent transparent #4278C0; -fx-border-width: 0px 0px 0px 4px;" stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.sistema.reserva.controllersFx.Tela_Principal.BoxAcomodacaoFx">
+   <children>
+      <HBox alignment="CENTER" prefHeight="150.0" prefWidth="898.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="150.0" prefWidth="246.0">
+               <children>
+                  <ImageView fitHeight="126.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../img/quarto.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <HBox prefHeight="150.0" prefWidth="498.0">
+               <children>
+                  <VBox prefHeight="150.0" prefWidth="385.0">
+                     <children>
+                        <Label fx:id="nome" prefHeight="27.0" prefWidth="358.0" text="Quarto Stand ">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="386.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="94.0" text="Descricao:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="descricao" prefHeight="18.0" prefWidth="312.0" text="Label">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="24.0" prefWidth="386.0" spacing="10.0">
+                           <children>
+                              <Label text="Tamanho:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font></Label>
+                              <Label fx:id="tamanho" text="20m2">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="20.0" prefWidth="38.0" text="Tipo :">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="tipo" prefHeight="18.0" prefWidth="55.0" text="Quarto">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="386.0" spacing="10.0">
+                           <children>
+                              <Label text="Qdt. Leitos: ">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="qtdLeitos" text="5">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Numero:">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="numero" text="101">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" prefHeight="150.0" prefWidth="130.0">
+                     <children>
+                        <Label text="Apartir de ">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="preco" alignment="CENTER" prefHeight="20.0" prefWidth="105.0" text="2000 CVE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Button fx:id="btnReservar" mnemonicParsing="false" onMouseClicked="#btnClicado" prefHeight="36.0" prefWidth="122.0" styleClass="btnReservar" text="Reservar" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
