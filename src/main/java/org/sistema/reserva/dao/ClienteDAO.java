@@ -4,6 +4,7 @@ import org.sistema.reserva.authentication.AuthManager;
 import org.sistema.reserva.connection.Connect;
 import org.sistema.reserva.entity.Funcionario;
 import org.sistema.reserva.entity.Cliente;
+import org.sistema.reserva.validations.MessageFx;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -14,6 +15,7 @@ import java.util.List;
 
 public class ClienteDAO {
     public void criarContaCliente(Cliente cliente){
+        MessageFx messageFx = new MessageFx();
         String sql = "INSERT INTO CLIENTE (nome, sobrenome, email, senha, telefone) VALUES (?, ?, ?, ?, ?)";
 
         PreparedStatement ps = null;
@@ -29,7 +31,9 @@ public class ClienteDAO {
             ps.close();
 
             System.out.println("\nCONTA CRIADO COM SUCESSO\n");
+            messageFx.showSucess("CONTA CRIADO COM SUCESSO");
         }catch(SQLException e){
+            messageFx.showError("Erro ao criarConta");
             System.out.println("Erro ao criarConta");
             System.out.println(e.getMessage().toString());
         }
@@ -61,6 +65,7 @@ public class ClienteDAO {
     }
 
     public void actualizarCliente(Cliente cliente){
+        MessageFx messageFx = new MessageFx();
         Connection con = Connect.getConnection();
         StringBuilder sql = new StringBuilder("UPDATE CLIENTE SET ");
         List<Object> params = new ArrayList<>();
@@ -99,7 +104,9 @@ public class ClienteDAO {
 
                 smt.executeUpdate();
                 System.out.println("\nDADOS DO CLIENTE ATUALIZADO\n");
+                messageFx.showSucess("DADOS ATUALIZADO");
             } catch (SQLException e) {
+                messageFx.showError("Erro ao actualizar dados");
                 System.out.println(e.getMessage());
             }
         } else {
@@ -109,6 +116,7 @@ public class ClienteDAO {
 
 
     public void removerCliente(int id){
+        MessageFx messageFx = new MessageFx();
         Connection con = Connect.getConnection();
         String sql = "DELETE FROM CLIENTE WHERE id = ? ";
 
@@ -117,7 +125,9 @@ public class ClienteDAO {
             smt.executeUpdate();
             smt.close();
             System.out.println("\nCLIENTE REMOVIDO COM SUCESSO\n");
+            messageFx.showSucess("CONTA REMOVIDO COM SUCESSO");
         }catch (SQLException e){
+            messageFx.showError("erro a excluir conta");
             System.out.println(e.getMessage().toString());;
         }
     }

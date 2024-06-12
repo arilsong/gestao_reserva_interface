@@ -8,6 +8,7 @@ import org.sistema.reserva.entity.Cliente;
 import org.sistema.reserva.entity.Funcionario;
 import org.sistema.reserva.entity.Quarto;
 import org.sistema.reserva.service.FuncionarioService;
+import org.sistema.reserva.validations.MessageFx;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +19,7 @@ import java.util.List;
 
 public class FuncionarioDAO {
     public void cadastrarFuncionario(Funcionario funcionario){
+        MessageFx messageFx = new MessageFx();
         String sql = "INSERT INTO FUNCIONARIO (nome, sobrenome,nome_usuario, email, senha, telefone, endereco, cargo, nivel_acesso) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
         PreparedStatement ps = null;
@@ -37,7 +39,9 @@ public class FuncionarioDAO {
             ps.close();
 
             System.out.println("\nFUNCIONARIO ADICIONADO COM SUCESSO\n");
+            messageFx.showSucess("FUNCIONARIO ADICIONADO COM SUCESSO");
         }catch(SQLException e){
+            messageFx.showError("Erro ao adicionar usuario");
             System.out.println("Erro ao adicionar usuario");
             System.out.println(e.getMessage().toString());
         }
@@ -98,6 +102,7 @@ public class FuncionarioDAO {
     }
 
     public void actualizarFuncionario(Funcionario funcionario,int id) {
+        MessageFx messageFx = new MessageFx();
         Connection con = Connect.getConnection();
         StringBuilder sql = new StringBuilder("UPDATE FUNCIONARIO SET ");
         List<Object> params = new ArrayList<>();
@@ -149,8 +154,10 @@ public class FuncionarioDAO {
                 smt.executeUpdate();
                 smt.close();
                 System.out.println("\nDADOS DO FUNCIONARIO ATUALIZADO\n");
+                messageFx.showSucess("DADOS DO FUNCIONARIO ATUALIZADO");
             } catch (SQLException e) {
                 System.out.println(e.getMessage());
+                messageFx.showError("Erro ao atualizar funcionario");
             }
         } else {
             System.out.println("\nNenhum dado para atualizar.\n");
@@ -182,6 +189,7 @@ public class FuncionarioDAO {
     }
 
     public void removerFuncionario(int id){
+        MessageFx messageFx = new MessageFx();
         Connection con = Connect.getConnection();
         String sql = "DELETE FROM FUNCIONARIO WHERE id = ? ";
 
@@ -190,7 +198,9 @@ public class FuncionarioDAO {
             smt.executeUpdate();
             smt.close();
             System.out.println("\nFUNCIONARIO REMOVIDO COM SUCESSO\n");
+            messageFx.showSucess("FUNCIONARIO REMOVIDO COM SUCESSO");
         }catch (SQLException e){
+            messageFx.showError("Erro ao remover funcionario");
             System.out.println(e.getMessage().toString());;
         }
     }

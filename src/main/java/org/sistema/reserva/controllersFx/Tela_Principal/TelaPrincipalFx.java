@@ -81,7 +81,12 @@ public class TelaPrincipalFx {
         }
 
         if(botaoClicado == btnSobre){
-            pane.setCenter(sobrePanel);
+            try {
+                sobrePanel = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/org/sistema/reserva/views/tela_principal/tela_sobre.fxml")));
+                pane.setCenter(sobrePanel);
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
 
         if(botaoClicado == btnPerfil){
