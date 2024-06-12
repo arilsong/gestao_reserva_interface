@@ -1,0 +1,81 @@
+
+/*.table-view .column-header .label {
+    -fx-background-color:  #742ec6;
+    -fx-text-fill: #fff;
+    -fx-border-width: 0px;
+}
+
+.table-view {
+    -fx-border-width: 0px;
+}
+
+
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.entralizarTbela {
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell {
+    -fx-padding: 5px 0px 5px 0px;
+}
+
+
+
+
+
+}*/
+
+.table-view {
+    -fx-background-color:#651FFF;
+    -fx-background-radius:14 14 0 0;
+}
+
+.table-view .column-header-background{
+        -fx-background-color: #651FFF;
+        -fx-background-radius:14;
+        -fx-background-insets: 0 0 10 0;
+
+
+
+    }
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white ;
+}
+
+
+.table-row-cell:hover .table-cell {
+    -fx-background-color: #6b6b6b;
+    -fx-text-fill: #fff;
+}
+
+.table-cell {
+    -fx-font-size: 13px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: white;
+}
+
+.table-row-cell:even {
+    -fx-background-color: lightgray;
+}
+
+
+
+.entralizarTbela {
+    -fx-alignment: CENTER;
+}
+
+.table-row-cell {
+    -fx-padding: 5px 0px 5px 0px;
+}
